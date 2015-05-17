@@ -3,6 +3,7 @@ title: 'Reproducible Research: Peer Assessment 1'
 output:
   html_document:
     keep_md: yes
+    self_contained: no
 ---
 
 
@@ -70,10 +71,28 @@ hist(total$Total, col="red", main="Total steps per day", xlab="Steps")
 
 ![plot of chunk histogram total](figure/histogram total-1.png) 
 
+now we will calcilate the mean and the median of the total
+
+
+```r
+meanT<-mean(total$Total, na.rm=TRUE)
+medianT<-median(total$Total, na.rm = TRUE)
+```
+
+With the above calculations we see that the mean is 1.0766189 &times; 10<sup>4</sup> and the median is 10765
+
 
 
 ## What is the average daily activity pattern?
 
+We will make the timeseries with the intervals 5-minutes and I got a complete crazy plot....
+
+
+```r
+plot(activity$interval, activity$steps, col="blue", main="Pattern", ylab="Steps", type = "l", xlab="5 min interval")
+```
+
+![plot of chunk timeseries](figure/timeseries-1.png) 
 
 
 ## Imputing missing values
