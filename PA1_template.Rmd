@@ -14,7 +14,7 @@ First we have to unzip the data, we will use the function unz and then we read t
 
 ```{r setting, echo=FALSE}
 library(knitr)
-opts_chunk$set(cache=TRUE, fig.path='figure/')
+opts_chunk$set(cache=FALSE, fig.path='figure/')
 ```
 
 
